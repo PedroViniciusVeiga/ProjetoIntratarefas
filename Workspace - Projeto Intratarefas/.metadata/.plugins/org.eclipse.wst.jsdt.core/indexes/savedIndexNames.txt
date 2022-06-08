@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\pedro_v_veiga\Desktop\ProjetoIntratarefas\Workspace - Projeto Intratarefas\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2165063329.index
+4291579412.index
+930893599.index
+896224755.index
+2000408096.index
+2001474033.index
