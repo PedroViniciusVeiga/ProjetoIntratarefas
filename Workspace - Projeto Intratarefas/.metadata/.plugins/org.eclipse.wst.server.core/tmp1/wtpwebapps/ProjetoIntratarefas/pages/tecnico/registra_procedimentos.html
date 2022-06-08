@@ -1,0 +1,54 @@
+<script src="../../js/tec.js"></script>
+
+<form name="frmAddProcedimento" method="post" id="addProcedimento" class="frmInserir">
+	<fieldset class="frmProcedimento">
+		<legend>Registro de Procedimentos</legend>
+		<table id="infoProc">
+			<tr>
+				<th class="campoProc">Descrição de Procedimentos de Conserto</th>
+				</tr>
+				<tr>
+				<td class="campoProc"><textarea name="descricao" id="descricao"></textarea></td>
+			<tr>
+			<th class="acoesProc">
+		<button type="button" class="botaoFunc" onclick="INTRATAREFAS.procedimento.cadastrar()">Registrar</button></th><th class="acoesProc"><button type="reset" onclick="verificaMotivo(null)" class="botaoFunc">Limpar</button></th>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+
+<div id="buscaProcedimento">
+  <input type="text" id="campoBuscaProcedimento" placeholder="Buscar Nome..."/>
+  <img src="../../img/lupa.png" id="btnBusca" alt="Buscar" onclick="INTRATAREFAS.procedimento.buscarPorNome()"/>
+</div>
+<div id="listaProcedimento" class="listaRegistros"></div>
+
+<!-- Modal para confirmar exclusão -->
+<div id="modalExcluiProcedimento"  class="modalEditar">
+<form name="frmExcluirProcedimento" id="editaProcedimento" class="frmEditar">
+<table>
+			<tr>
+			<th>Deseja Realmente excluir o Procedimento?</th>
+			</tr>
+			</table>
+			</form>
+</div>
+
+<!-- Modal para edição de funcionários -->
+<div id="modalEditaProcedimento" class="modalEditar">
+	<form name="frmEditaProcedimento" method="post" id="editaProcedimento" class="frmEditar">
+		<table class="tabelaDimension">
+				<tr>
+				<th class="campoProc">Descrição de Procedimentos de Conserto</th>
+				</tr>
+				<tr>
+				<td class="campoProc"><textarea name="descricao" id="descricao"></textarea></td>
+			</tr>
+		</table>
+		<input type="hidden" name="idProcedimento">
+	</form>
+</div>
+
+
+
+

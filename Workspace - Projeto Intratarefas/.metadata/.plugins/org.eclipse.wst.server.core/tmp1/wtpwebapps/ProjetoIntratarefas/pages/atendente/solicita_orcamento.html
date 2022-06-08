@@ -1,0 +1,41 @@
+<script src="../../js/atend.js"></script>
+
+<form name="frmAddOrcamento" method="post" id="addOrcamento" class="frmInserir">
+	<fieldset class="frmOrcamento">
+		<legend>Registro de Orçamentos</legend>
+		<table id="infoFunc">
+		
+
+			<tr>
+				<th class="campoClin">CPF</th><td class="campoClin"><input type="number" name="cpf" placeholder="CPF - 00000000000"></td>
+			</tr>
+				<tr>
+				<th class="campoClin">Nome do Cliente</th><td class="campoClin"> <input type="text" name="txtnome" placeholder="Nome Completo"></td>
+			</tr>
+			<tr>
+			<th class="campoClin">Equipamento</th><td class="campoClin"><select name="equipamento" id="selectEquip">
+						<option value="">Selecione</option>
+						<option value=1>Computador</option>
+						<option value=2>Smartphone</option>
+						<option value=3>Notebook</option>
+						<option value=4>Tablet</option>
+						<option value=5>Impressoras</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<th class="campoClin">Marca</th><td class="campoClin"><input type="text" name="marca" placeholder="Samgsuga"></td>
+			</tr>
+				<tr>
+				<th class="campoClin">Modelo</th><td class="campoClin"><input type="text" name="modelo" placeholder="Galaxy Pobret"></td>
+			</tr>
+				<tr>
+				<th class="campoClin">Defeito</th><td class="campoClin"><textarea name="defeito" id="descricao" placeholder="Descrição do Defeito"></textarea></td>
+			</tr>
+			<tr>
+			<th class="acoesFunc">
+		<button type="button" class="botaoFunc" onclick="INTRATAREFAS.cliente.orcamento()">Registrar</button></th><th class="acoesFunc"><button type="reset" onclick="verificaMotivo(null)" class="botaoFunc">Limpar</button></th>
+			</tr>
+		</table>
+	</fieldset>
+</form>

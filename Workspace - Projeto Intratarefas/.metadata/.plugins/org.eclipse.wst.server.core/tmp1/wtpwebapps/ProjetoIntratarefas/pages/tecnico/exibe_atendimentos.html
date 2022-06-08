@@ -1,0 +1,34 @@
+<script src="../../js/tec.js"></script>
+<h2 id="tituloAtendimento">Consulta de Atendimentos</h2>
+<div id="listaDeAtendimento" class="listaRegistros"
+	style="padding-top: 20px;"></div>
+
+<!-- Modal para execução dos Orçamentos -->
+<div id="modalEditaOrcamento" class="modalEditar">
+	<div id="infoAtendimento"></div>
+	<input type="hidden" name="atendimento">
+
+
+	<!-- Adiciona Procedimentos -->
+	<form name="frmAddProcedimento" id="addProcedimento" class="frmInserir">
+		<table id="infoProcedimento">
+		
+			<tr>
+				<td><img src="../../img/add.png" name="addProcedimento"
+					class="botaoAdd" id="btnBusca" alt="Adicionar" /></td>
+				<td><a style="margin-left: 10px;">Procedimentos</a></td>
+				<td><a style="margin-left: 55px;">Valor (R$)</a></td>
+			</tr>
+			
+			<tr class="detalhes">
+				<td><img src="../../img/remove.png" name="removeProcedimento"
+					class="botaoRemove" id="btnBusca" alt="Remover" onclick="INTRATAREFAS.procedimento.removeCampo(this)"/></td>
+				<td><select name="procId[]" id="selProcedimento">
+						<option value="" class="buscando">Procedimentos</option>
+				</select></td>
+				<td><input type="text" name="valorProc[]"></td>
+			</tr>
+			
+		</table>
+	</form>
+</div>

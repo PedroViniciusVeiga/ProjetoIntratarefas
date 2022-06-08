@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Intratarefas</title>
+<meta name="description" content="Intratarefas">
+<meta name="keywords"content="Suporte Técnico, Intratarefas, Helpdesk, Suporte">
+<meta name="author" content="Pedro Vinicius Veiga - Escola Sistêmica">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" Integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script src="js/site.js"></script>
+<script src="js/tec.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+</head>
+<body>
+
+	<section id="layoutLogin">
+	<form name="frmlogin" method="post" action="autenticar" onsubmit="return validaLogin()">
+		<fieldset class="login">
+	
+			<img alt="Icone de Usuário" src="img/user.png" id="imgUser">
+			<h2 class="title">Sistema Intratarefas</h2>
+			<div class=campoCredenciais>
+				<label for="user">Usuário: </label> <input type="text"
+					name="txtuser" id="user">
+			</div>
+
+			<div class=campoCredenciais>
+				<label for="password">Senha: </label> <input type="password"
+					name="txtpassword" autocomplete="current-password" id="passwrd">
+			
+			</div>
+
+			<button type="submit" id=botaoLogin >Entrar</button>
+		</fieldset>
+</form>
+	</section>
+
+	<footer></footer>
+
+
+</body>
+</html>
