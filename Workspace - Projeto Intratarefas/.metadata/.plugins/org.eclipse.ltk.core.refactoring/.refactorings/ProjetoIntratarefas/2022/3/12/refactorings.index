@@ -1,0 +1,5 @@
+1647305120551	Rename resource 'consulta_atendimentos.html'
+1647392594506	Encapsulate field 'idcliente'
+1647557784043	Encapsulate field 'idprocedimento'
+1647557793652	Encapsulate field 'nome'
+1647560951352	Rename type 'JDBCProcedimento'

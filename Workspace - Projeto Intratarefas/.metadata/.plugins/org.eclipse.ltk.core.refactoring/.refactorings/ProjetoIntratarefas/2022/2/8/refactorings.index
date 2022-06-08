@@ -1,0 +1,18 @@
+1644963441945	Delete element
+1644964266848	Delete element
+1644971754427	Delete element
+1645134139353	Rename resource 'pages'
+1645138249596	Move 'index.html' to 'WebContent'
+1645143284934	Rename resource 'site'
+1645144277853	Delete element
+1645144358729	Delete element
+1645145437625	Encapsulate field 'nome'
+1645145443319	Encapsulate field 'cpf'
+1645145448254	Encapsulate field 'email'
+1645145453375	Encapsulate field 'telefone'
+1645145899989	Encapsulate field 'user'
+1645145904583	Encapsulate field 'nome'
+1645145908824	Encapsulate field 'cpf'
+1645145912613	Encapsulate field 'email'
+1645145916753	Encapsulate field 'funcao'
+1645145921019	Encapsulate field 'password'

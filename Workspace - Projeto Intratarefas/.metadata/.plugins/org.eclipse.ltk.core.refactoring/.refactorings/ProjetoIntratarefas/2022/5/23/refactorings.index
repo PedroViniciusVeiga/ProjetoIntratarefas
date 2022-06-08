@@ -1,0 +1,6 @@
+1653948216520	Encapsulate field 'idprocedimento'
+1653948264788	Encapsulate field 'valor'
+1653948425682	Encapsulate field 'procedimento'
+1653948452515	Encapsulate field 'Arrayprocedimento'
+1653948558897	Rename type 'Procedimento_has_Manutencao'
+1653957030185	Encapsulate field 'procedimentos'
