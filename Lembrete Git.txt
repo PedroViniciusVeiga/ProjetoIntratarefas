@@ -1,0 +1,2 @@
+Você fez commit dos repositórios de ambas as workspaces direto nas pastas
+

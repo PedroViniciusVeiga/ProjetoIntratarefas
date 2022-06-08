@@ -1,0 +1,146 @@
+
+<html><head>
+<meta charset="UTF-8"/>
+<title>Data dictionary: intratarefas</title>
+<style>
+    td,th {
+      text-align:center; 
+      vertical-align:middle;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    caption, th, td {
+      padding: .2em .8em;
+      border: 1px solid #fff;
+    }
+    caption {
+      background: #dbb768;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    th {
+      font-weight: bold;
+      background: #f3ce7d;
+    }
+    td {
+      background: #ffea97;
+    }
+  </style>
+</head>
+<body>
+<table><caption>Table: funcionario - Tabela que conterá as informações de todos os funcionários que atuam na empresa, que utilizam o software, tendo as informações pessoas do funcionário, assim como os seus dados de acesso ao sistema</caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idfuncionario</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Identificador individual de cada funcionário, gerado automáticamente a cada novo funcionário adicionado, não poderá ser nulo pois se trata de uma chave primária, e precisa ter um id com valor</td></tr>
+<tr><td>user</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que conterá o usuário de acesso dos funcionários ao sistema, é obrigatório ter esse campo preenchido ao criar um registro nessa tabela.</td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que conterá o nome do funcionário, necessário para que possa saber quem é o funcionário além dos outros dados</td></tr>
+<tr><td>cpf</td><td>CHAR(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo desntinado para a inserção do número de CPF, sem as pontuações, somente números, campo definido como CHAR, para que seja inserido a quantidade certa de números obrigatóriamente, informação obrigatória para que possa se ter registro de algo único do funcionário além de seu id.</td></tr>
+<tr><td>email</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado a inserção do e-mail do funcionário</td></tr>
+<tr><td>funcao</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que irá conter todas as funções dos funcionários, sendo cada uma delas um número e seguindo a seguinte ordem:
+1 - Administrador
+2 - Analista
+3 - Técnico
+4 - Atendente
+Estrará pré-definido e sua inserção é obrigatória para definir os niveis de permissão do sistema.</td></tr>
+<tr><td>password</td><td>CHAR(32)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo utilizado para inserir uma senha de acesso ao sistema, utilizado pelos funcionários, seu tipo seria CHAR(32), sendo obrigatório para campos do tipo password.</td></tr>
+</table></br>
+<table><caption>Table: cliente - Tabela com o intuito de cadastrar novos clientes na assistência técnica, sendo necessário os dados apontados no requisitos, além de um identificador individual de cada cliente.</caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idcliente</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo direcionado para a identificação única do cliente, sendo sempre preenchido automáticamente, além de ser a chave primária da tabela.</td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado para o nome completo do cliente.</td></tr>
+<tr><td>cpf</td><td>CHAR(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo desntinado para a inserção do número de CPF, sem as pontuações, somente números, campo definido como CHAR, para que seja inserido a quantidade certa de números obrigatóriamente, informação obrigatória para que possa se ter registro de algo único do cliente além de seu id.</td></tr>
+<tr><td>email</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado para a inserção do e-mail do cliente, campo obrigatório pois ao fim da manutenção, será necessário enviar um e-mail ao cliente informado-o sobre. Validação do que será digitado no campo será feita pelo back-end.</td></tr>
+<tr><td>telefone</td><td>VARCHAR(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado para a inserção do número de telefone do cliente, é necessário DD e o número com o 9 e apenas os números do telefone, dado necessário, pois em certo momento será necessário ligar para o cliente para informa-lo do término da manutenção.</td></tr>
+</table></br>
+<table><caption>Table: manutencao - Tabela que terá todas as informações referentes a manutenção, tendo os dados do equipamento do cliente, assim como o defeito, o cliente e o responsável técnico pela manutenção.
+									</caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>atendimento</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Identificação individual do atendimento, que contém a chave primária, e é preenchido automáticamente a cada atendimento novo.</td></tr>
+<tr><td>equipamento</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado para a seleção do tipo de equipamento que será consertado na manutenção em questão, será do tipo INT, pois cada númeração do campo será um tipo de equipamento para selecionar, seguindo a ordem:
+1 - Computador
+2 - Smartphone
+3 - Notebook
+4 - Tablet
+5 - Impressoras</td></tr>
+<tr><td>marca</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Local designado para a inserção da marca do equipamento.</td></tr>
+<tr><td>modelo</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Local onde será adicionado a descrição do modelo do equipamento.</td></tr>
+<tr><td>inicio</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td>Local para definir a data de inicio do atendimento</td></tr>
+<tr><td>defeito</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo onde toda a descrição do defeito do equipamento na hora do orçamento será adicionado, poderá ser utilizado para apontar os problemas no momento em que o cliente tiver uma solicitação de garantia aprovada.
+concatena ==String defeito = defeitoAntigo + " Solicitação de garantia "+dataDeHoje+" - "defeitoNovo...</td></tr>
+<tr><td>entrega</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td>Local para definir a data de entrega do equipamento após o conserto estar concluido, tendo a data completa, ele não é obrigatório no inicio, pois essa informação só é definida ao final do conserto.</td></tr>
+<tr><td>status</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Local designado para adicionar a situação de cada atendimento, definido com status, onde o tipo sendo um INT, cada situação de atendimento seria um número, já pré-definido da seguinte forma:
+1 - Em análise
+2 - Aguardando aprovação
+3 - Em aberto
+4 - Recusado
+5 - Em atendimento
+6 - Em teste
+7 - Finalizado
+8 - Cancelado
+9 - Equipamento entregue
+10 - Em análise de garantia
+11 - Solicitação negada</td></tr>
+<tr><td>cliente_idcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Local com a identificação do cliente que está com o equipamento em manutenção, sendo o mesmo id do cliente que foi cadastrado.</td></tr>
+<tr><td>funcionario_idfuncionario</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Identificação do funcionário que está solucionando o problema do cliente, sendo ele um técnico ou um analista.</td></tr>
+</table></br>
+<table><caption>Table: procedimento - Tabela que conterá os procedimentos de solução que poderão ser utilizados na hora de uma resposta do analista há um orçamento, irá abranger todos os equipamentos, terá uma identificação individual de cada um (id), e o nome do procedimento (nome)</caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idprocedimento</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Identificador do procedimento de conserto, o mesmo ainda sendo a chave primária da tabela, e a medida que forem sendo criados novos procedimentos, ele se auto preencherá</td></tr>
+<tr><td>nome</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado para a inserção do nome do procedimento de conserto, o mesmo será referenciado pelo idprocedimento, e o seu preenchimento é obrigatório</td></tr>
+</table></br>
+<table><caption>Table: manutencao_has_procedimento - Tabela que irá intermediar a tabela procedimento e manutencao, onde irá referenciar o procedimento de conserto, com a sua respectiva manutenção, além de adicionar  o preço.</caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>manutencao_atendimento</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Identificação da manutenção que terá os procedimentos especificados da tabela procedimento, gerado automáticamente para que certa manutenção, tenha os respectivos procedimentos</td></tr>
+<tr><td>procedimento_idprocedimento</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Identificação do procedimento que estará na sua respectiva manutenção, que será ligada pelo back-end</td></tr>
+<tr><td>valor</td><td>DECIMAL(5,2)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que indicará o valor de cada procedimento, poderá ser adicionado separadamente a cada tipo de procedimento</td></tr>
+<tr><td>is_realizado</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo destinado a ter o status do procedimento, ou seja, se ele já foi realizado no atendimento, ou não, os status são denominados conforme abaixo:
+0 - Procedimento ainda não realizado
+1 - Procedimento realizado
+</td></tr>
+</table></br>
+</body></html>

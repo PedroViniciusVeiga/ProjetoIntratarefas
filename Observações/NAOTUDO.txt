@@ -1,0 +1,14 @@
+crud funcionarios - campo senha e criar modal de edição
+
+consulta atendente filtro (util) e adicionar todos no filtro tirar defeito, valor e procedimento pensar na necessidade da visualização E A MODAL VULGO LUPA by marlow
+
+crud clientes- campo senha e criar modal de edição
+
+
+
+equipamentonãp liga. Solicitação de garantia 09/12/2021 21:56 - Equipamento liga, mas desliga sozinho. Garantia recusada 12/12/2021 por Cabrak
+
+concatena ==String defeito = defeitoAntigo + " Solicitação de garantia "+dataDeHoje+" - "defeitoNovo...
+
+EM ATENDIMENTO	modal de confirmação ao salvar tudo
+adicionar status ao procedimento [x] ou [ ] int

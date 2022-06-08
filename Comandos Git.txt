@@ -1,0 +1,11 @@
+Nome
+git config --global user.name "Pedro Veiga"
+
+E-mail
+git config --global user.email "pedroviniciusveiga01@gmail.com"
+
+Adicionar ao primeiro estagio
+git add .
+
+Commitar
+git commit -m " PI Finalizado"
