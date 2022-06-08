@@ -1,0 +1,95 @@
+<script src="../../js/admin.js"></script>
+
+<form name="frmAddFuncionario" method="post" id="addFuncionario" class="frmInserir">
+	<fieldset class="frmFuncionario">
+		<legend>Registro de Funcionários</legend>
+		<table id="infoFrm">
+		
+			<tr>
+				<th class="campoFunc">Usuário</th><td class="campoFunc"><input type="text" name="txtuser" placeholder="usuario"></td>
+			</tr>
+			<tr>
+				<th class="campoFunc">Nome</th><td class="campoFunc"> <input type="text" name="txtnome" placeholder="Nome Completo"></td>
+			</tr>
+			<tr>
+				<th class="campoFunc">CPF</th><td class="campoFunc"><input type="text" name="cpf" placeholder="CPF - 00000000000"></td>
+			</tr>
+			<tr>
+				<th class="campoFunc">E-mail</th><td class="campoFunc"><input type="text" name="email" placeholder="exemple@dominio.com.br"></td>
+			</tr>
+			<tr>
+				<th class="campoFunc">Senha</th><td class="campoFunc"><input type="text" name="password" placeholder="**********"></td>
+			</tr>
+			<tr>
+			<th class="campoFunc">Função</th><td class="campoFunc"><select name="funcao">
+						<option value="">Selecione</option>
+						<option value=1>Administrador</option>
+						<option value=2>Atendente</option>
+						<option value=3>Técnico</option>
+				</select></td>
+			</tr>
+			<tr>
+			<th class="acoesFunc">
+		<button type="button" class="botaoFunc" onclick="INTRATAREFAS.funcionario.cadastrar()">Registrar</button></th><th class="acoesFunc"><button type="reset" onclick="verificaMotivo(null)" class="botaoFunc">Limpar</button></th>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+<div id="buscaFuncionario">
+  <input type="text" id="campoBuscaFuncionario" placeholder="Buscar Usuário..."/>
+  <img src="../../img/lupa.png" id="btnBusca" alt="Buscar" onclick="INTRATAREFAS.funcionario.buscarPorNome()"/>
+</div>
+<div id="listaFuncionarios" class="listaRegistros"></div>
+
+<!-- Modal para confirmar exclusão -->
+<div id="modalExcluiFuncionario"  class="modalEditar">
+<form name="frmExcluirFuncionario" id="editaFuncionario" class="frmEditar">
+<table>
+			<tr>
+			<th>Deseja Realmente excluir o funcionário?</th>
+			</tr>
+			</table>
+			</form>
+</div>
+
+<!-- Modal para edição de funcionários -->
+<div id="modalEditaFuncionario" class="modalEditar">
+	<form name="frmEditaFuncionario" method="post" id="editaFuncionario" class="frmEditar">
+		<table class="tabelaDimension">
+			<tr>
+			<th>Nome</th>
+				<td><input type="text" name="txtnome"></td>
+			</tr>
+			<tr>
+			<th>CPF</th>
+				<td><input type="text" name="cpf"></td>
+			</tr>
+			<tr>
+			<th>E-mail</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+			<th>Senha</th>
+				<td><input type="text" name="password"></td>
+			</tr>
+			<tr>
+				<th>Função</th>
+				<td><select name="funcao" id="selFuncaoEdicao">
+						<option value="">Selecione</option>
+						<option value=1>Administrador</option>
+						<option value=2>Atendente</option>
+						<option value=3>Técnico</option>
+				</select></td>
+			</tr>
+		</table>
+		<input type="hidden" name="idFuncionario">
+	</form>
+</div>
+
+
+
+
+
+
+
+

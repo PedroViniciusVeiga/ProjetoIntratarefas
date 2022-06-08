@@ -1,0 +1,77 @@
+<script src="../../js/atend.js"></script>
+
+<form name="frmAddCliente" method="post" id="addCliente" class="frmInserir">
+	<fieldset class="frmCliente">
+		<legend>Registro de Clientes</legend>
+		<table id="infoFunc">
+		
+			<tr>
+				<th class="campoClin">Nome</th><td class="campoClin"> <input type="text" name="txtnome" placeholder="Nome Completo"></td>
+			</tr>
+			<tr>
+				<th class="campoClin">CPF</th><td class="campoClin"><input type="text" name="cpf" placeholder="CPF - 00000000000"></td>
+			</tr>
+			<tr>
+				<th class="campoClin">E-mail</th><td class="campoClin"><input type="text" name="email" placeholder="exemple@dominio.com.br"></td>
+			</tr>
+			<tr>
+				<th class="campoClin">Telefone</th><td class="campoClin"><input type="text" name="telefone" placeholder="47984427354"></td>
+			</tr>
+			<tr>
+			<th class="acoesFunc">
+		<button type="button" class="botaoFunc" onclick="INTRATAREFAS.cliente.cadastrar()">Registrar</button></th><th class="acoesFunc"><button type="reset" onclick="verificaMotivo(null)" class="botaoFunc">Limpar</button></th>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+
+<div id="buscaCliente">
+  <input type="text" id="campoBuscaCliente" placeholder="Buscar Nome..."/>
+  <img src="../../img/lupa.png" id="btnBusca" alt="Buscar" onclick="INTRATAREFAS.cliente.buscarPorNome()"/>
+</div>
+<div id="listaCliente" class="listaRegistros"></div>
+
+<!-- Modal para confirmar exclusão -->
+<div id="modalExcluiCliente"  class="modalEditar">
+<form name="frmExcluirCliente" id="editaCliente" class="frmEditar">
+<table>
+			<tr>
+			<th>Deseja Realmente excluir o Cliente?</th>
+			</tr>
+			</table>
+			</form>
+</div>
+
+<!-- Modal para edição de funcionários -->
+<div id="modalEditaCliente" class="modalEditar">
+	<form name="frmEditaCliente" method="post" id="editaCliente" class="frmEditar">
+		<table class="tabelaDimension">
+			<tr>
+			<th>Nome</th>
+				<td><input type="text" name="txtnome"></td>
+			</tr>
+			<tr>
+			<th>CPF</th>
+				<td><input type="text" name="cpf"></td>
+			</tr>
+			<tr>
+			<th>E-mail</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+			<th>Telefone</th>
+				<td><input type="text" name="telefone"></td>
+			</tr>
+			
+		</table>
+		<input type="hidden" name="idCliente">
+	</form>
+</div>
+
+
+
+
+
+
+
+

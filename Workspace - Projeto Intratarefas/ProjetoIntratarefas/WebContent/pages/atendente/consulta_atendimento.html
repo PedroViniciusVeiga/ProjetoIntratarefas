@@ -1,0 +1,108 @@
+<script src="../../js/atend.js"></script>
+
+
+
+	<form name="frmatendimento" method="post" action="#" onsubmit="">
+		<fieldset class="fltconsultaAtendimento">
+			<legend>Filtrar Atendimento</legend>
+		<h1 class="subtitleAtd">Relatório de Atendimentos</h1>
+
+			<div class="fltopcao">
+				<label>Atendente</label> <select name="selatendente" class="fltcampo"
+					onchange="verificaMotivo(this.value)">
+					<option value="">Escolha</option>
+					<option value="PE">Pedro</option>
+				</select>
+			</div>
+		
+			<div class="fltopcao">
+				<label>Equipamento</label> <select name="selequipamento"
+					class="fltcampo" onchange="verificaMotivo(this.value)">
+					<option value="">Selecione</option>
+						<option value=1>Computador</option>
+						<option value=2>Smartphone</option>
+						<option value=3>Notebook</option>
+						<option value=4>Tablet</option>
+						<option value=5>Impressoras</option>
+				</select>
+			</div>
+			
+			<div class="fltopcao">
+				<label>Status</label> <select name="selstatus" class="fltcampo" id="campoBuscaStatus"
+					onchange="verificaMotivo(this.value)">
+					<option value="">Selecione</option>
+						<option value=1>Em Análise</option>
+						<option value=2>Aguardando Aprovação</option>
+						<option value=3>Em Aberto</option>
+						<option value=4>Recusado</option>
+						<option value=5>Em Atendimento</option>
+						<option value=6>Em Teste</option>
+						<option value=7>Finalizado</option>
+						<option value=8>Cancelado</option>
+						<option value=9>Equipamento Entregue</option>
+						<option value=10>Em Análise de Garantia</option>
+						<option value=11>Solicitação Negada</option>
+				</select>
+			</div>				
+	<img alt="Lupa de Pesquisa" src="../../img/lupa.png" class="fltIcon">
+		</fieldset>
+	</form>
+	
+	<div id="listaDeConsultaAtendimento" class="listaRegistros"></div>
+	
+	<table class="tabelaProdutos">
+			<thead>
+				<tr>
+					<th>Cliente</th>
+					<th>Atendente</th>
+					<th>Equipamento</th>
+					<th>Valor</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+				<tr>
+						<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+
+				<tr>
+						<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+				<tr>
+						<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+				<tr>
+						<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+				<tr>
+						<td>Marlow</td>
+					<td>Pedro Veiga</td>
+					<td>Notebook</td>					
+					<td>110,00</td>
+					<td>Em Aberto</td>
+				</tr>
+			</tbody>
+		</table>
