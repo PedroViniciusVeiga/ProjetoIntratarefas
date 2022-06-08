@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+/* Configuração Geral do corpo*/
+
+
+body{
+	margin: 0 auto;
+	font-family: "Century Gothic", sans-serif;
+	
+}
+
+section{
+	clear: both;
+    min-height: 475.5px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/*************************************************
+			 Tela de Autenticação
+*************************************************/
+#layoutLogin{
+    width: 25%;
+    margin-top: 67px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 70px;
+}
+
+#imgUser{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 105px;
+}
+
+.login{
+	height: 450px;
+	
+}
+
+.title{
+    width: 228px;
+    margin-left: 40px;
+}
+
+/*Campos*/
+.campoCredenciais{
+	margin: 36px;
+    width: 178px;
+}
+
+#user, #passwrd{
+	width: 225px;
+    height: 20px;
+}
+
+#botaoLogin{
+	width: 100px;
+    height: 30px;
+    margin-left: 105px;
+}
+
+
+/*************************************************
+			    Menu de Opções
+*************************************************/
+
+/*Banner*/
+  .banner{
+ height: 50px;
+  background-color: black;
+  padding-left: 20px;
+  padding-top:17.5px;
+  color:white;
+  margin: 0px;
+ }
+
+.sessionUser{
+	float: right;
+    font-size: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/*Menu*/
+nav{
+	clear: both;
+	/*width: 80%;*/
+	margin: 0px auto;
+	height: 55px;
+}
+nav a {
+	color: black;
+    text-decoration: none;
+    text-align: center;
+}
+.opcao{
+    float: left;
+    width: 32.888%;
+    background-color: white;
+    padding: 10px 0;
+    font-size: 23px;
+    font-weight: bold;
+    border: black;
+    border-style: solid;
+    
+}
+
+nav .opcao:hover{
+	background-color: #000000;
+    color: white;
+}
+
+/*Opção com Dropdown*/
+#opcaodrop{
+	float: left;
+    width: 32.888%;
+    background-color: white;
+    padding: 10px 0;
+    font-size: 23px;
+    font-weight: bold;
+    border: black;
+    border-style: solid;
+
+}
+
+ .dropdown{
+	position: relative;
+	display: inline-block;
+}
+
+/*conteudo dropdown oculto por padrão*/
+.dropdown-content{
+	display: none;
+	z-index: 1;
+	position: absolute;
+	width: 438px;
+	margin-top: 11px;
+	border: 3px solid #000000;
+}
+
+/*Links dentro do dropdown*/
+.dropdown-content a{
+	display: block;
+	
+}
+
+/* muda a cor dos links quando passar o mouse*/
+.dropdown-content a:hover{
+	background-color: #000000;
+    color: white;
+}
+
+/*mostrar o menu dropdown menu ao passar o mouse*/
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+/*************************************************
+			    Tela Inicial Admin   
+			 Relatório de Atendimentos
+*************************************************/
+
+.initial{
+	margin-left: 90px;
+    padding-top: 50px;
+}
+
+.subtitle{
+	padding-left: 20px;
+    padding-top:17.5px;
+}
+
+/*Filtro*/
+ .fltatendimento{
+	margin: auto;
+    width: 95%;
+    height: 12%;
+}
+
+.fltopcao{
+	width: 160px;
+    float: left;
+    height: 60px;
+    margin-right: 12px;
+    padding-top: inherit;
+    text-align: center;
+	
+}
+
+.fltcampo{
+	width: 160px;
+    height: 21px;
+}
+
+.fltIcon{
+margin-top: 26px;
+    width: 30px;
+    height: 25px;
+    margin-left: 12px;
+}
+
+
+
+
+/*************************************************
+			 Registro de Funcionarios
+/********** Formulário de Funcionários  ***********/
+
+.frmFuncionario{
+	width: 350px;
+    margin: auto;
+    margin-top: 15px;
+    height: 350px;
+}
+
+#infoFrm{
+	margin: auto;
+}
+
+.campoFunc{
+	padding-right: 25px;
+    padding-top: 15px;
+}
+
+.acoesFunc{
+	padding-top: 60px;
+    padding-left: 20%;
+}
+
+.botaoFunc{
+    background-color: white;
+    height: 25px;
+    font-weight: bold;
+}
+
+.botaoFunc:hover{
+	background-color: #c7c7c7;
+}
+
+#buscaFuncionario{
+  background-color:#f3f3f3;
+  border:solid 1px;
+  border-radius:5px;
+  width: 180px;
+  margin-left: 22.4%; 
+  margin-bottom: 10px;
+ 
+}
+
+#campoBuscaFuncionario{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:25px;
+  width:145px;
+ 
+}
+
+#btnBusca{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+/*************************************************
+			 Registro de Clientes
+/********** Formulário de Clientes  ***********/
+
+.frmCliente{
+	width: 350px;
+    margin: auto;
+    margin-top: 70px;
+
+}
+
+.campoClin{
+	padding-left: 30px;
+    padding-top: 15px;
+}
+
+#buscaCliente{
+	background-color: #f3f3f3;
+    border: solid 1px;
+    border-radius: 5px;
+	width: 155px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+ 
+}
+
+#campoBuscaCliente{
+	float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 25px;
+	width: 128px; 
+}
+
+/********** Solicitação de Orçamentos  ***********/
+
+.frmOrcamento{
+	margin: auto;
+    width: 400px;
+	margin-top: 70px;
+	height: 420px;
+}
+
+#equip{
+	width: 100%;
+}
+
+
+/*************************************************
+			 Registro de Procedimentos
+/********** Formulário de Procedimentos  ***********/
+
+.frmProcedimento{
+	width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.campoProc{
+	padding-left: 7px;
+}
+
+#infoProc{
+    margin: auto;
+    margin-top: 20px;
+}
+
+#descricao{
+	width: -webkit-fill-available;
+	height: 100px;
+}
+
+.acoesProc{
+	padding-top: 50px;
+    padding-left: 67px;   
+    float: left;
+}
+
+#buscaProcedimento{
+	background-color: #f3f3f3;
+    border: solid 1px;
+    border-radius: 5px;
+	width: 155px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+ 
+}
+
+#campoBuscaProcedimento{
+	float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 25px;
+	width: 128px; 
+}
+
+
+
+
+/**********   Tabela de Funcionários  ***********/
+
+.listaRegistros{
+	margin-bottom: 10px;
+}
+
+.listaRegistros table{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin: 0 auto;
+	min-width: 50%;	
+}
+
+.listaRegistros table th{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0 5px;
+	border: transparent;
+}
+
+.listaRegistros tr, .listaRegistros td, .listaRegistros th{
+	border: 1px solid #000000;
+	padding: 0px 5px;
+}
+
+.listaRegistros tr, .listaRegistros td{
+	font-size: 16px;
+}
+
+.listaRegistros tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.listaRegistros tr:nth-child(odd) {
+    background-color: #cdcdcd;
+}
+
+.listaRegistros .acoes{
+	width: 70px;
+}
+
+.listaRegistros table img{
+	padding: 0 5px;
+	width:20px;
+	height: 20px;
+	cursor: pointer;
+}	
+	
+.acoesIcon {
+	width: 20px;
+}
+
+
+.tabelaDimension{
+	    margin: auto;
+    margin-top: 50px;
+}
+
+
+
+/*************************************************
+			        Rodapé
+*************************************************/
+
+footer{
+background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    margin-top: 5px;
+    
+}
+
+/***********        Modais        **************/
+#modalAviso, .modalEditar{
+	display:none;
+}

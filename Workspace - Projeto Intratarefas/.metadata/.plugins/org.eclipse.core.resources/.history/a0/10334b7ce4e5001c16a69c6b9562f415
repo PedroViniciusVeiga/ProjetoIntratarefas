@@ -1,0 +1,36 @@
+<script src="../../js/admin.js"></script>
+
+<h1 class="subtitle">Relatório de Atendimentos</h1>
+
+	<form name="frmfiltro" method="post">
+		<fieldset class="fltatendimento">
+			<legend>Filtrar Atendimento</legend>
+			<div class="fltopcao">
+			<label>Periodo</label>
+			<input type="date" name="inicio">
+			</div>
+			<div class="fltopcao">
+				<label>Status</label> 
+				<select name="selprocedimento" class="fltcampo" id="selStatus"
+					>
+					<option value="">Todos</option>
+						<option value=1>Em Análise</option>
+						<option value=2>Aguardando Aprovação</option>
+						<option value=3>Em Aberto</option>
+						<option value=4>Recusado</option>
+						<option value=5>Em Atendimento</option>
+						<option value=6>Em Teste</option>
+						<option value=7>Finalizado</option>
+						<option value=8>Cancelado</option>
+						<option value=9>Equipamento Entregue</option>
+						<option value=10>Em Análise de Garantia</option>
+						<option value=11>Solicitação Negada</option>
+				</select>
+			</div>				
+	<img alt="Lupa de Pesquisa" src="../../img/lupa.png" class="fltIcon" onclick="INTRATAREFAS.funcionario.buscarPorStatus()">
+	<img alt="Icone de PDF" src="../../img/pdf.png" class="fltIcon" onclick="INTRATAREFAS.funcionario.geraPDF()" >
+		</fieldset>
+	</form>
+	 
+	
+<div id="listaAtendimentosGerais" class="listaRegistros"></div>

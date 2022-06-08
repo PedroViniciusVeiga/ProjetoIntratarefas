@@ -1,0 +1,75 @@
+<script src="../../js/admin.js"></script>
+
+<script>
+//Atualiza a tabela
+INTRATAREFAS.funcionario.buscarPorStatus = function(){
+		
+		var status = $("#selStatus").val();//valor digitado no filtro
+		var inicio = $("#selInicio").val();
+		var fim = $("#selEntrega").val();
+		
+		let AjaxRequest = { 
+   		status,
+		inicio,
+		fim
+}
+		
+		$.ajax({
+			type: "GET",//usado o GET por ser uma busca de informações
+			url: INTRATAREFAS.PATH + "funcionario/buscarPorStatus",
+			data: AjaxRequest,//"status="+status,
+			success: function(dados){
+				
+				dados = JSON.parse(dados);
+				$("#listaAtendimentosGerais").html(INTRATAREFAS.funcionario.exibirAtendimentos(dados));
+				
+				
+			},
+			error: function(info){
+				INTRATAREFAS.exibirAviso("Erro ao consultar os atendimentos: "+ info.status + " - " + info.responseText);
+			}
+		});
+		
+	};
+	
+	INTRATAREFAS.funcionario.buscarPorStatus();
+</script>
+
+<h1 class="subtitle">Relatório de Atendimentos</h1>
+
+	<form name="frmfiltro" method="post">
+		<fieldset class="fltatendimento">
+			<legend>Filtrar Atendimento</legend>
+			<div class="fltopcao">
+			<label>Data Inicio</label>
+			<input type="date" name="inicio" id="selInicio">
+			</div>
+			<div class="fltopcao">
+			<label>Data Limite</label>
+			<input type="date" name="inicio" id="selEntrega">
+			</div>
+			<div class="fltopcao">
+				<label>Status</label> 
+				<select name="selprocedimento" class="fltcampo" id="selStatus"
+					>
+					<option value="">Todos</option>
+						<option value=1>Em Análise</option>
+						<option value=2>Aguardando Aprovação</option>
+						<option value=3>Em Aberto</option>
+						<option value=4>Recusado</option>
+						<option value=5>Em Atendimento</option>
+						<option value=6>Em Teste</option>
+						<option value=7>Finalizado</option>
+						<option value=8>Cancelado</option>
+						<option value=9>Equipamento Entregue</option>
+						<option value=10>Em Análise de Garantia</option>
+						<option value=11>Solicitação Negada</option>
+				</select>
+			</div>				
+	<img alt="Lupa de Pesquisa" src="../../img/lupa.png" class="fltIcon" onclick="INTRATAREFAS.funcionario.buscarPorStatus()">
+	<img alt="Icone de PDF" src="../../img/pdf.png" class="fltIcon" onclick="INTRATAREFAS.funcionario.geraPDF()" >
+		</fieldset>
+	</form>
+	 
+	
+<div id="listaAtendimentosGerais" class="listaRegistros"></div>

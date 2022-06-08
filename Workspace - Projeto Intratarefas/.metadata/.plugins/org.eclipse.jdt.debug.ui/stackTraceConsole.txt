@@ -1,0 +1,5 @@
+1 - Computador
+2 - Smartphone
+3 - Notebook
+4 - Tablet
+5 - Impressoras
